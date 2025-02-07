@@ -3,7 +3,7 @@
 ## 簡介
 程式練習...
 
-訓練一個結合注意力門和殘差塊的 UNet，用來分割靜脈影像。
+訓練一個基於注意力門和殘差塊的 UNet，用來分割靜脈影像。
 
 參考資料如下:
 
@@ -11,7 +11,7 @@
 
 2. 變異 UNet 部分參考: [https://github.com/zhixuhao/unet](https://github.com/zhixuhao/unet)
 
-注意力門和殘差塊則是參考兩篇 arXiv 提出的模塊加入上述變異的 UNet 中。
+注意力門和殘差塊則是參考兩篇 arXiv 提到的架構加入上述變異的 UNet 中。
 
 3. 注意力門: [Attention U-Net: Learning Where to Look for the Pancreas](https://arxiv.org/abs/1804.03999)
 
@@ -44,11 +44,11 @@
    
 2. CLAHE(clipLimit=2.0, tileGridSize=(4, 4))
    
-3. 低通高斯濾波器去噪
+3. 高斯低通濾波器去噪
  
-4. 高通拉普拉斯濾波器
+4. 拉普拉斯高通濾波器
    
-5. 反轉二值化 + Otsu決定閾值
+5. 反轉二值化 + Otsu決定分割閾值
 
 
 原圖與標籤
