@@ -1,7 +1,6 @@
-# Attention-Mechanism-Residual-UNet
+## Attention-Gate-Residual-UNet
 
-## 簡介
-程式練習...
+### Reference
 
 訓練一個基於注意力門和殘差塊的 UNet，用來分割靜脈影像。
 
