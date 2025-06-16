@@ -8,12 +8,12 @@ This project implements a UNet-based model with Attention Gates and Residual Blo
 - Residual Block: [Road Extraction by Deep Residual U-Net](https://arxiv.org/abs/1711.10684)
 
 ### Contents
-- `data\` 
-- `main.py`
-- `data_loader.py`
-- `blocks.py`
-- `model.py`
-- `my_metrics.py`
+- `data\` - contains training, validation, and testing data
+- `main.py` - main execution script
+- `data_loader.py` - data preprocessing and augmentation
+- `blocks.py` - building blocks used in the model (attention gates, residual blocks, etc.)
+- `model.py` - defines the full model architecture
+- `my_metrics.py` - custom evaluation metrics (Dice, IoU, etc.)
 - `requirements.txt` - environment dependencies
 
 ## Dataset
