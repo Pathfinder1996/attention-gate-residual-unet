@@ -1,28 +1,28 @@
 from keras.layers import Conv2D, UpSampling2D, Concatenate, Add, BatchNormalization, Activation, Multiply
 
-#批量歸一化與激活函數
-def bn_act(x, act=True):
+# batch normalization and activation function
+def batch_norm_act(x, act=True):
     x = BatchNormalization()(x)
     if act:
         x = Activation("relu")(x)
     return x
 
-#卷積塊
+# convolutional block with batch normalization and activation
 def conv_block(x, filters, kernel_size=(3, 3), padding="same", strides=1):
-    conv = bn_act(x)
+    conv = batch_norm_act(x)
     conv = Conv2D(filters, kernel_size, padding=padding, strides=strides)(conv)
     return conv
 
-#殘差塊
+# residual block with two convolutional blocks and a shortcut connection
 def residual_block(x, filters, strides=1):
     res = conv_block(x, filters, strides=strides)
     res = conv_block(res, filters, strides=1)
     shortcut = Conv2D(filters, kernel_size=(1, 1), padding="same", strides=strides)(x)
-    shortcut = bn_act(shortcut, act=False)
+    shortcut = batch_norm_act(shortcut, act=False)
     output = Add()([shortcut, res])
     return output
 
-#注意力
+# attention gate
 def attention_gate(Fg, Fs, filters):
     Wg = Conv2D(filters, kernel_size=1, padding="same")(Fg)
     Wg = BatchNormalization()(Wg)
@@ -36,8 +36,8 @@ def attention_gate(Fg, Fs, filters):
 
     return Multiply()([Fs, psi])
 
-#上採樣與跳層連接塊 編碼塊跳層連接到解碼塊
+# upsample concat block that upsamples the input and concatenates it with a skip connection
 def upsample_concat_block(x, xskip):
-    u = UpSampling2D((2, 2))(x)
-    c = Concatenate()([u, xskip])
-    return c
+    up = UpSampling2D((2, 2))(x)
+    con = Concatenate()([up, xskip])
+    return con

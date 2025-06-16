@@ -1,8 +1,7 @@
 import os
-import numpy as np 
 
 from keras.preprocessing.image import ImageDataGenerator
-
+import numpy as np 
 import skimage.io as io
 import skimage.transform as trans
 
@@ -48,7 +47,7 @@ def train_generator(batch_size, train_path, image_folder, mask_folder, aug_dict,
         img, mask = adjust_data(img, mask)
         yield img, mask
 
-def test_generator(test_path, num_image=180, target_size=(256, 256), as_gray=True):
+def test_generator(test_path, num_image=30, target_size=(256, 256), as_gray=True):
     for i in range(num_image):
         img = io.imread(os.path.join(test_path, f"{i}.png"), as_gray=as_gray)
         img = img / 255

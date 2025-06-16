@@ -1,9 +1,6 @@
 import tensorflow as tf
 
-'''
-自定義模型評估指標
-'''
-
+# Custom metrics for TensorFlow/Keras
 def dice_coefficient(y_true, y_pred, smooth=1):
     intersection = tf.reduce_sum(y_true * y_pred)
     union = tf.reduce_sum(y_true) + tf.reduce_sum(y_pred)
