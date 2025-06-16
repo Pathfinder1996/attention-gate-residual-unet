@@ -57,7 +57,7 @@ To set up the environment (optional if already installed), run:
 ```
 pip install -r .\requirements.txt
 ```
-Replace image_path in vein_enhance.py with your input image path, then run:
+Replace image path in main.py with your input image path, then run:
 ```
 python .\main.py 
 ```
