@@ -8,7 +8,7 @@ This project implements a UNet-based model with Attention Gates and Residual Blo
 - Residual Block: [Road Extraction by Deep Residual U-Net](https://arxiv.org/abs/1711.10684)
 
 ### Contents
-- `data\` - contains training, validation, and testing data
+- `data/membrane` - contains training, validation, and testing data
 - `main.py` - main execution script
 - `data_loader.py` - data preprocessing and augmentation
 - `blocks.py` - building blocks used in the model (attention gates, residual blocks, etc.)
@@ -19,7 +19,9 @@ This project implements a UNet-based model with Attention Gates and Residual Blo
 ## Dataset
 The dataset is from [https://github.com/wilchesf/dorsalhandveins](https://github.com/wilchesf/dorsalhandveins). 
 
-It contains 1,782 dorsal hand vein images, cropped to ROI, and split into:
+It contains 1,782 dorsal hand vein images, manually cropped to the region of interest (ROI).
+
+The dataset is split in a 7:2:1 ratio for training, validation, and testing:
 - Train: `data/membrane/train/image` and `data/membrane/train/label`
 - Validation: `data/membrane/val/val_image` and `data/membrane/val/val_label`
 - Test: `data/membrane/test`
