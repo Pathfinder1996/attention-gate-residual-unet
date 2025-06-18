@@ -1,4 +1,4 @@
-## 📝 Attention-Gate-Residual-UNet
+## 📝 Attention Gate Residual UNet
 This project utilizes a UNet-based model with Attention Gates and Residual Blocks for the segmentation of dorsal hand veins.
 
 ### 🔗 Reference
