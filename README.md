@@ -8,13 +8,13 @@ This project utilizes a UNet-based model with Attention Gates and Residual Block
 - Residual Block: [Road Extraction by Deep Residual U-Net](https://arxiv.org/abs/1711.10684)
 
 ### 📁 Contents
-- `data/membrane` - includes training, validation, and testing data
-- `main.py` - primary execution script
-- `data_loader.py` - responsible for data preprocessing and augmentation
-- `blocks.py` - contains building blocks used in the model (attention gates, residual blocks, etc.)
-- `model.py` - defines the full model architecture
-- `my_metrics.py` - custom evaluation metrics (Dice, IoU, etc.)
-- `requirements.txt` - lists environment dependencies
+- `data/membrane` - includes training, validation, and testing data.
+- `main.py` - primary execution script.
+- `data_loader.py` - responsible for data preprocessing and augmentation.
+- `blocks.py` - contains building blocks used in the model. (attention gates, residual blocks, etc.)
+- `model.py` - defines the full model architecture.
+- `my_metrics.py` - custom evaluation metrics. (Dice, IoU, etc.)
+- `requirements.txt` - lists environment dependencies.
 
 ## 📁 Dataset
 The dataset is from [https://github.com/wilchesf/dorsalhandveins](https://github.com/wilchesf/dorsalhandveins). 
