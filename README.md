@@ -1,7 +1,7 @@
 ## 📝 Attention Gate Residual UNet
 程式練習...
 
-基於原始 UNet 並結合 Attention Gates 與 Residual Blocks 的深度學習模型，用來分割靜脈影像(以下範例為手背靜脈)。
+基於原始 UNet 並結合 Attention Gate 與 Residual Block 的深度學習模型，用來分割靜脈影像(以下範例為手背靜脈)。
 
 ### 🔗 參考文獻
 - UNet: [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
